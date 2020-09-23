@@ -1,0 +1,65 @@
+<!-- Remember my form tags-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quiz App</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"
+    type="text/css" />
+  <link href="app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <main>
+  <header>
+    <h1>Academic Assessment</h1>
+  </header>
+
+  <div>
+    <p>Please answer each question to the best of your ability:</p>
+      <li>Question 8</li>
+        <form id ="js - quizapp - form">
+        <h2>Question 8</h2>
+           <select id= "quiz-answer">
+            <input type="radio" id="A" name="answers" value="A">
+            <label for="question">A</label>
+            <input type="radio" id="B" name="answers" value="B">
+            <label for="question">B</label>
+            <input type="radio" id="C" name="answers" value="C">
+            <label for="question">C</label>
+            <input type="radio" id="D" name="answers" value="D">
+            <label for="question">D</label>
+            <input type="radio" id="E" name="answers" value="E">
+            <label for="question">E</label>
+           </select>        
+        </form>
+        <form id ='js - submit'>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+  </div>
+  <div id="result"></div>
+
+  <script>
+    $("#js - quizapp - form").on("submit", function() {
+        event.preventDefault();
+        var $answer = $("#quiz-answer");
+        var answer = $answer.val();
+        console.log(answer);
+        if (answer === "A") {
+            $("#result").text("Woweeee! You got it! WOOO PARTY!")
+        } else {
+            $("#result").text("Try again!");
+        }
+      });
+  </script>
+ </main>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.js" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
