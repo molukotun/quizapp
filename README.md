@@ -1,5 +1,27 @@
 ### Boilerplate app structure for Quiz App project
 
-Quiz on Varsity Tutors
-Image Assets
-Back of Napkin - HTML
+LAYOUT
+-Quiz on Varsity Tutors
+-Image Assets
+-Back of Napkin - HTML
+
+GIST FILE
+START SCREEN
+WRONG
+MOVE ON TO NEXT QUESTION
+EMPTY MAIN TAG
+
+SCORE
+OVERALL SCORE
+START OVER
+SKIP QUESTIONS
+
+(SHOPPING LIST)
+TEMPLATE GENERATION FUNCTIONS
+SINGLE PURPOSE EVENT HANDLER
+RENDER FUNCTION - ALL INSIDE
+UPDATED STORE
+
+---------------------
+function welcomeScreen()
+Template literal
