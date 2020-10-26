@@ -1,4 +1,8 @@
 
+  /* {
+    box-sizing: border-box;
+  } */
+  
  * Here is how you would write responsive styles if you chose NOT to use a grid system.
  *
  * If you'd like to use a grid system I'd recommend starting here: http://neat.bourbon.io/
@@ -9,10 +13,10 @@
  * media queries to target each breakpoint in ascending order (see below)
  * 
 
-
-
   * These are your base styles.
   * Write these styles 1st!
+
+
   html {
     background-color: lightYellow;
   }
@@ -21,8 +25,12 @@
     background-color: blueviolet;
   }
 
+  h1 {
+
+  } 
+
   div {
-    background-color: blue;
+    background-color: darkcyan;
   }
 
   .welcome-section {
@@ -32,36 +40,27 @@
   body {
     background-color: lightyellow;
   }
-
-  h1 {
-
-  }
   
   .main-nav-list {
     list-style: none;
     padding: 0;
   }
 
-  /* {
-    box-sizing: border-box;
-  } */
-
-
-  /* .main-nav-list-item {
+  .main-nav-list-item {
     padding: .7rem 0;
     text-align:center;
     background-color: lime;
     border: 1px solid #000;
   }
-  
+
   .box {
     background-color: pink;
-    border:1px solid blue;
+    border: 1px solid blue;
     margin: 10px 0;
-    padding:10px;
-  } */ */ */
+    padding: 10px;
+  } 
   
-  /*
+  
    * Here is where you would override your base styles
    * for screens that are larger than 700px.
    *
@@ -69,7 +68,8 @@
    *
    * You don't need to write separate styles here
    * UNLESS you are overriding your base styles.
-   */
+  
+
   /* @media (min-width: 700px) {
     body {
       width: 80%;

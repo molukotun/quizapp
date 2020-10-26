@@ -1,6 +1,6 @@
 /* eslint-disable strict */
+// 5 or more questions are required
 const QUIZ = {
-  // 5 or more questions are required
   questions: [
     {
       question: 'What is 9/5?',
@@ -55,10 +55,10 @@ const QUIZ = {
     {
       question: '3x + 3 = 15, What is the value of x?',
       answers: {
-        a: '4',
+        a: '7',
         b: '3',
         c: '9',
-        d: '7'
+        d: '4'
       },
       correctAnswer: 'a'
 
@@ -70,7 +70,6 @@ const QUIZ = {
   message: '',
   message2: '',
   ansCor: false
-
 };
 
 //Welcome Screen Template
@@ -87,7 +86,7 @@ function welcomeScreen() {
 
 //Button for start quiz
 function startQuiz() {
-  $('main').on("click", ".startbtn",  function () {
+  $(".startbtn").on("click", function () {
     QUIZ.quizStarted = true;
     render();
   });
@@ -115,8 +114,7 @@ function generateQuestion(questionNumber) {
 }
 
 function checkAnswer() {
-  // $(".nextbtn").click(function (evt) 
-  $('main').on('click', '.nextbtn', function(evt) {
+  $(".nextbtn").click(function (evt) {
     evt.preventDefault();
     let correctAns = QUIZ.questions[QUIZ.questionNumber].correctAnswer;
     let ansName = QUIZ.questions[QUIZ.questionNumber].n
@@ -168,18 +166,25 @@ function resultScreen() {
 }
 
 
-function handleContinueQuiz() {
-  $('main').on('click', '.continuebtn', function() {
+function continueQuiz() {
+  $('.main').on('click', '.continuebtn', function() {
     render();
   })
 }
 
+function continueQuiz() {
+  $(".continuebtn").on("click", function () {
+    render();
+  });
+}
+
 function restartQuiz() {
-  $('main').on("click", ".restartbtn",  function () {
+  $(".restartbtn").on("click", function () {
     QUIZ.quizStarted = false;
     QUIZ.score = 0;
     QUIZ.questionNumber = 0;
     render();
+    startQuiz();
   });
 }
 
@@ -193,6 +198,7 @@ function render() {
     }
   }
   $("main").html(page);
+  checkAnswer();
 }
 
 function renderResults() {
@@ -205,15 +211,19 @@ function renderEnd() {
   let page = '';
   page += resultScreen();
   $("main").html(page);
+  restartQuiz();
 }
 
 function main() {
   render();
   startQuiz();
   checkAnswer();
-  handleContinueQuiz();
-  restartQuiz();
 }
 
 
 $(main);
+
+
+
+
+
